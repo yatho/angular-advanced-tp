@@ -4,10 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Lib } from 'lib';
+import { Header } from './header/header';
+import { Dashboard } from './dashboard/dashboard';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Header,
+    Dashboard
   ],
   imports: [
     BrowserModule,
@@ -16,7 +21,8 @@ import { Lib } from 'lib';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection()
+    provideZonelessChangeDetection(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })
