@@ -35,13 +35,16 @@ importers:
     devDependencies:
       '@angular/build':
         specifier: ^20.3.4
-        version: 20.3.4(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(@angular/compiler@20.3.3)(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(@angular/platform-browser@20.3.3(@angular/common@20.3.3(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1)))(@types/node@24.7.0)(chokidar@4.0.3)(karma@6.4.4)(less@4.4.1)(ng-packagr@20.3.0(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.6)(tslib@2.8.1)(typescript@5.9.3)(vitest@3.2.4(@types/node@24.7.0)(jsdom@27.0.0(postcss@8.5.6))(less@4.4.1)(sass@1.90.0))
+        version: 20.3.4(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(@angular/compiler@20.3.3)(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(@angular/localize@20.3.3(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(@angular/compiler@20.3.3))(@angular/platform-browser@20.3.3(@angular/common@20.3.3(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1)))(@types/node@24.7.0)(chokidar@4.0.3)(karma@6.4.4)(less@4.4.1)(ng-packagr@20.3.0(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.6)(tslib@2.8.1)(typescript@5.9.3)(vitest@3.2.4(@types/node@24.7.0)(jsdom@27.0.0(postcss@8.5.6))(less@4.4.1)(sass@1.90.0))
       '@angular/cli':
         specifier: ^20.3.4
         version: 20.3.4(@types/node@24.7.0)(chokidar@4.0.3)
       '@angular/compiler-cli':
         specifier: ^20.3.0
         version: 20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3)
+      '@angular/localize':
+        specifier: 20.3.3
+        version: 20.3.3(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(@angular/compiler@20.3.3)
       '@types/jasmine':
         specifier: ~5.1.0
         version: 5.1.9
@@ -234,6 +237,14 @@ packages:
       '@angular/core': 20.3.3
       '@angular/platform-browser': 20.3.3
       rxjs: ^6.5.3 || ^7.4.0
+
+  '@angular/localize@20.3.3':
+    resolution: {integrity: sha512-myToeQiFPzOxXu5CBoQPnMPCpM4HtQh9m+tiL5RsMtZs5NrD3DX9QxzVJl2Y4nozpphfQejoI1t2fbS7yM5qAQ==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    hasBin: true
+    peerDependencies:
+      '@angular/compiler': 20.3.3
+      '@angular/compiler-cli': 20.3.3
 
   '@angular/platform-browser@20.3.3':
     resolution: {integrity: sha512-RUWpg49GnXdINjomRFrE/SRioxEehYqUzDVskDWddNeNhV9Z21zeC6Ao2i5q8UKq0y/oq2ShX7XFLprxqLoLnQ==}
@@ -1185,6 +1196,18 @@ packages:
   '@tufjs/models@3.0.1':
     resolution: {integrity: sha512-UUYHISyhCU3ZgN8yaear3cGATHb3SMuKHsQ/nVbHXcmnBf+LzQ/cQfhNG+rfaSHgqGKNEm2cOCLVLELStUQ1JA==}
     engines: {node: ^18.17.0 || >=20.5.0}
+
+  '@types/babel__core@7.20.5':
+    resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
+
+  '@types/babel__generator@7.27.0':
+    resolution: {integrity: sha512-ufFd2Xi92OAVPYsy+P4n7/U7e68fex0+Ee8gSG9KX7eo084CWiQ4sdxktvdl0bOPupXtVJPY19zk6EwWqUQ8lg==}
+
+  '@types/babel__template@7.4.4':
+    resolution: {integrity: sha512-h/NUaSyG5EyxBIp8YRxo4RMe2/qQgvyowRwVMzhYhBCONbW8PUsg4lkFMrhgZhUe5z3L3MiLDuvyJ/CaPa2A8A==}
+
+  '@types/babel__traverse@7.28.0':
+    resolution: {integrity: sha512-8PvcXf70gTDZBgt9ptxJ8elBeBjcLOAcOtoO/mPJjtji1+CdGbHgm77om1GrsPxsiE+uXIpNSK64UYaIwQXd4Q==}
 
   '@types/chai@5.2.2':
     resolution: {integrity: sha512-8kB30R7Hwqf40JPiKhVzodJs2Qc1ZJ5zuT3uzw5Hq/dhNCl3G3l83jfpdI1e20BP348+fV7VIL/+FxaXkqBmWg==}
@@ -3260,7 +3283,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular/build@20.3.4(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(@angular/compiler@20.3.3)(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(@angular/platform-browser@20.3.3(@angular/common@20.3.3(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1)))(@types/node@24.7.0)(chokidar@4.0.3)(karma@6.4.4)(less@4.4.1)(ng-packagr@20.3.0(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.6)(tslib@2.8.1)(typescript@5.9.3)(vitest@3.2.4(@types/node@24.7.0)(jsdom@27.0.0(postcss@8.5.6))(less@4.4.1)(sass@1.90.0))':
+  '@angular/build@20.3.4(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(@angular/compiler@20.3.3)(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(@angular/localize@20.3.3(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(@angular/compiler@20.3.3))(@angular/platform-browser@20.3.3(@angular/common@20.3.3(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1)))(@types/node@24.7.0)(chokidar@4.0.3)(karma@6.4.4)(less@4.4.1)(ng-packagr@20.3.0(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.6)(tslib@2.8.1)(typescript@5.9.3)(vitest@3.2.4(@types/node@24.7.0)(jsdom@27.0.0(postcss@8.5.6))(less@4.4.1)(sass@1.90.0))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2003.4(chokidar@4.0.3)
@@ -3294,6 +3317,7 @@ snapshots:
       watchpack: 2.4.4
     optionalDependencies:
       '@angular/core': 20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1)
+      '@angular/localize': 20.3.3(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(@angular/compiler@20.3.3)
       '@angular/platform-browser': 20.3.3(@angular/common@20.3.3(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))
       karma: 6.4.4
       less: 4.4.1
@@ -3380,6 +3404,17 @@ snapshots:
       '@angular/platform-browser': 20.3.3(@angular/common@20.3.3(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))
       rxjs: 7.8.2
       tslib: 2.8.1
+
+  '@angular/localize@20.3.3(@angular/compiler-cli@20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3))(@angular/compiler@20.3.3)':
+    dependencies:
+      '@angular/compiler': 20.3.3
+      '@angular/compiler-cli': 20.3.3(@angular/compiler@20.3.3)(typescript@5.9.3)
+      '@babel/core': 7.28.3
+      '@types/babel__core': 7.20.5
+      tinyglobby: 0.2.15
+      yargs: 18.0.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@angular/platform-browser@20.3.3(@angular/common@20.3.3(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.3(@angular/compiler@20.3.3)(rxjs@7.8.2)(zone.js@0.15.1))':
     dependencies:
@@ -4187,6 +4222,27 @@ snapshots:
     dependencies:
       '@tufjs/canonical-json': 2.0.0
       minimatch: 9.0.5
+
+  '@types/babel__core@7.20.5':
+    dependencies:
+      '@babel/parser': 7.28.4
+      '@babel/types': 7.28.4
+      '@types/babel__generator': 7.27.0
+      '@types/babel__template': 7.4.4
+      '@types/babel__traverse': 7.28.0
+
+  '@types/babel__generator@7.27.0':
+    dependencies:
+      '@babel/types': 7.28.4
+
+  '@types/babel__template@7.4.4':
+    dependencies:
+      '@babel/parser': 7.28.4
+      '@babel/types': 7.28.4
+
+  '@types/babel__traverse@7.28.0':
+    dependencies:
+      '@babel/types': 7.28.4
 
   '@types/chai@5.2.2':
     dependencies:
