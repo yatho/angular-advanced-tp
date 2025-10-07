@@ -11,11 +11,11 @@ describe('PostDetail', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PostDetail],
-      imports: [RouterModule.forRoot([])],
-      providers: [provideZonelessChangeDetection()
-      ]
-    })
+    imports: [PostDetail],
+    providers: [provideZonelessChangeDetection(),
+      provideRouter([])
+    ]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(PostDetail);

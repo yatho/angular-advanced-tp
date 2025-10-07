@@ -2,12 +2,13 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 import { Authors } from '../services/authors';
+import { NgIf, NgFor, AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-author',
-  standalone: false,
-  templateUrl: './author.html',
-  styleUrl: './author.css'
+    selector: 'app-author',
+    templateUrl: './author.html',
+    styleUrl: './author.css',
+    imports: [NgIf, NgFor, AsyncPipe]
 })
 export class Author {
   private authorService = inject(Authors);

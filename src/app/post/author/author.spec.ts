@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { Author } from './author';
 import { describe, beforeEach, afterEach, it, expect } from 'vitest';
 import { provideZonelessChangeDetection } from '@angular/core';
@@ -27,22 +27,22 @@ describe('Author', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Author],
-      providers: [
+    imports: [Author],
+    providers: [
         provideZonelessChangeDetection(),
         provideHttpClient(),
         provideHttpClientTesting(),
         provideRouter([
-          {
-            path: 'author',
-            component: Author,
-            resolve: {
-              post: () => ({ author: 1 })
+            {
+                path: 'author',
+                component: Author,
+                resolve: {
+                    post: () => ({ author: 1 })
+                }
             }
-          }
         ])
-      ]
-    }).compileComponents();
+    ]
+}).compileComponents();
 
     harness = await RouterTestingHarness.create('/author');
     httpTesting = TestBed.inject(HttpTestingController);

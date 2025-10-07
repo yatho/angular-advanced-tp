@@ -1,11 +1,11 @@
-import { inject, NgModule } from '@angular/core';
+import { inject } from '@angular/core';
 import { Author } from './author/author';
 import { PostDetail } from './post-detail/post-detail';
 import { PostList } from './post-list/post-list';
-import { ActivatedRouteSnapshot, RouterModule } from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 import { Posts } from './services/posts';
 
-const routes = [
+export const routes = [
   {
     path: '',
     component: PostList,
@@ -30,12 +30,3 @@ const routes = [
     ]
   }
 ];
-
-
-@NgModule({
-  imports: [
-    RouterModule.forChild(routes)
-  ],
-  exports: [RouterModule]
-})
-export class PostRoutingModule { }

@@ -12,12 +12,12 @@ describe('PostList', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PostList],
-      imports: [RouterModule.forRoot([])],
-      providers: [provideZonelessChangeDetection(),
-        provideHttpClient()
-      ]
-    })
+    imports: [PostList],
+    providers: [provideZonelessChangeDetection(),
+        provideHttpClient(),
+        provideRouter([])
+    ]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(PostList);

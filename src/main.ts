@@ -1,9 +1,8 @@
 /// <reference types="@angular/localize" />
 
-import { platformBrowser } from '@angular/platform-browser';
-import { AppModule } from './app/app-module';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { App } from './app/app';
+import { config } from './app/app.config';
 
-platformBrowser().bootstrapModule(AppModule, {
-  ngZoneEventCoalescing: true,
-})
+bootstrapApplication(App, config)
   .catch(err => console.error(err));
