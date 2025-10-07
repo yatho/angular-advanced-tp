@@ -1,16 +1,19 @@
 <section class="row">
-    <router-outlet />
-    <router-outlet name="author" />
+  <router-outlet />
+  <router-outlet name="author" />
 </section>
 
 <h1>Liste des posts</h1>
-<table *ngIf="posts$ | async as posts; else loadingTpl">
-    <tr *ngFor="let post of posts">
+@if (posts$ | async; as posts) {
+  <table>
+    @for (post of posts; track post.id) {
+      <tr>
         <td>{{post.title}}</td>
         <td><button [routerLink]="['/posts', post.id]" routerLinkActive="active">Allez aux détails</button></td>
-    </tr>
-</table>
+      </tr>
+    }
+  </table>
+} @else {
+  ...
+}
 
-<ng-template #loadingTpl>
-    ...
-</ng-template>

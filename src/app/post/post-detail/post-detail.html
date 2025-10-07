@@ -1,11 +1,9 @@
-<ng-container *ngIf="post$ | async as post; else loading">
-    <h2>{{post.title}}</h2>
-    <img [src]="post.photo" alt="Post illustration">
-    <p>
-        {{post.content}}
-    </p>
-</ng-container>
-
-<ng-template #loading>
-    chargement ...
-</ng-template>
+@if (post$ | async; as post) {
+  <h2>{{ post.title }}</h2>
+  <img [src]="post.photo" alt="Post illustration" />
+  <p>
+    {{ post.content }}
+  </p>
+} @else {
+  chargement ...
+}
