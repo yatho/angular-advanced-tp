@@ -1,13 +1,20 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
-import { Address } from 'lib';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
+
+export type Address = {
+  number: string;
+  street: string;
+  postalCode: string;
+  city: string;
+  country: string;
+};
 
 export type Author = {
   name: string;
   photo: string;
   pseudo: string[];
-  address: Address;
+  address: Address | null;
 };
 
 @Injectable({
@@ -18,5 +25,9 @@ export class Authors {
 
   public getAuthorById(id: number): Observable<Author> {
     return this.http.get<Author>(`/api/authors/${id}`);
+  }
+
+  public create(author: Author): Observable<void> {
+    return this.http.post<void>('/api/authors', author);
   }
 }

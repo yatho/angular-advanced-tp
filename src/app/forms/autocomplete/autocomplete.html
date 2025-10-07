@@ -1,0 +1,8 @@
+<form (submit)="submit()" [formGroup]="formGroup">
+  <lib-auto-filter-dropdown
+    placeholder="Select category"
+    [options]="categories"
+    formControlName="category"
+  />
+  <button mat-button type="submit">Valider</button>
+</form>
