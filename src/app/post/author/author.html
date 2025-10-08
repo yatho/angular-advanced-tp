@@ -1,6 +1,6 @@
 @if (author$ | async; as author) {
   <lib-tpl-card>
-    <img [src]="author.photo" alt="Auteur" />
+    <img [ngSrc]="author.photo" alt="Auteur" width="560" height="315" />
     <h2>{{ author.name }}</h2>
     @for (pseudo of author.pseudo; track $index) {
       <p>
