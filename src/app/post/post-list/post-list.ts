@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { Posts, Post } from '../services/posts';
-import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
+import { TplCardList } from 'lib';
 
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.html',
   styleUrl: './post-list.css',
-  imports: [RouterOutlet, RouterLinkActive, RouterLink, AsyncPipe],
+  imports: [RouterOutlet, RouterLink, AsyncPipe, TplCardList],
 })
 export class PostList {
   private postService = inject(Posts);

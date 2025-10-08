@@ -1,15 +1,17 @@
 @if (author$ | async; as author) {
-  <img [src]="author.photo" alt="Auteur" />
-  <h2>{{ author.name }}</h2>
-  @for (pseudo of author.pseudo; track $index) {
-    <p>
-      <i>{{ pseudo }}</i>
-    </p>
-  }
-  @if (author.address; as address) {
-    <p>
-      {{ address.number }} {{ address.street }} {{ address.postalCode }} {{ address.city }}
-      {{ address.country }}
-    </p>
-  }
+  <lib-tpl-card>
+    <img [src]="author.photo" alt="Auteur" />
+    <h2>{{ author.name }}</h2>
+    @for (pseudo of author.pseudo; track $index) {
+      <p>
+        <i>{{ pseudo }}</i>
+      </p>
+    }
+    @if (author.address; as address) {
+      <p>
+        {{ address.number }} {{ address.street }} {{ address.postalCode }} {{ address.city }}
+        {{ address.country }}
+      </p>
+    }
+  </lib-tpl-card>
 }
