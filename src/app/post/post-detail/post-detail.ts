@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { AsyncPipe, NgOptimizedImage } from '@angular/common';
-import { TplCard } from 'lib';
+import { Logger, TplCard } from 'lib';
 
 @Component({
   selector: 'app-post-detail',
